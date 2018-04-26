@@ -1,0 +1,111 @@
+@import '../../styles/index.scss';
+
+
+.pintarExterior{
+    margin:$global-margin;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+   
+
+    h4{
+        font-family: 'Glypha-LT';
+        //font-size:46.666667;
+        font-weight: bold;
+    }
+    figure{
+        position: relative;
+        background-color: lime;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 25px 0 25px 40px;
+        border-color: transparent transparent transparent $white;
+        position: absolute;
+        }
+        a{
+            position: absolute;
+        }
+    }
+    
+    .links{
+        display: flex;
+        @include sizes('mobile'){
+            justify-content: center;
+            :nth-child(1){
+                 padding-right: 10px;
+            }
+        }
+        @include sizes('desktop'){
+            :nth-child(1){
+                 padding-right: 30px;
+            }
+        }
+           a{
+                margin-top: 10px;
+                font-size: 15px;
+                color: $base-green;
+                font-weight: bold;
+            }
+    }
+ 
+
+    .outer{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 50px;
+        
+        img{
+            min-width: 100%;
+            height: auto;
+        }
+       
+
+        .column1{
+            display: flex;
+            @include sizes('desktop'){
+                flex:2;
+                margin-right: 50px;
+            }
+            margin-bottom: 50px;
+            :nth-child(1)>img{
+                box-shadow: 24px 24px 1px 0px  $base-grey;
+            }
+           
+        }
+        .column1:first-of-type{
+            @include sizes('desktop'){
+                justify-content: flex-end;
+            }
+        }
+        .column2{
+            display: flex;
+            flex:1;
+             @include sizes('desktop'){
+                justify-content: flex-end;
+            }
+            @include sizes('mobile'){
+                justify-content: center;
+               margin-bottom: 50px;
+            }
+            :nth-child(1)>img{
+            box-shadow: -24px 24px 1px 0px  $base-grey;
+            }
+            
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+             @include sizes('desktop'){
+                justify-content: left;
+                text-align: left;
+                width: 70%;
+		        }
+            }
+    }
+}

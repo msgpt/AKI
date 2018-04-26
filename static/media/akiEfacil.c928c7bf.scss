@@ -1,0 +1,60 @@
+@import '../../styles/index.scss';
+
+.akiEfacil{
+    //background-color: $dark-red;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text{
+        position: absolute;
+        color:$white;
+        span{
+            font-family: 'Glypha-LT';
+            font-size: 65px;
+            font-weight: bold;
+        }
+    }
+
+    .outer_images{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        @include sizes('mobile'){
+            div:last-child{
+            display: none;
+        }
+        }
+        
+        .img_div{
+            @include sizes('desktop'){  
+            flex:1;
+            }
+            
+            object-fit: cover;
+            img{
+              max-width: 100%;
+              height: auto;
+              
+              @include sizes('desktop'){
+                width: 450px;
+              }
+              
+              @include sizes(('xs')){
+                  width: 160px;
+              }
+              
+          }
+        }
+          
+        }
+   
+}
+ 

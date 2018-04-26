@@ -1,0 +1,66 @@
+@import "../../styles/index.scss";
+
+.outrosMiniSites {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin: $global-margin;
+  .wrapper {
+    width: 100%;
+  }
+  .outer_images {
+    display: flex;
+    @include sizes(("lg", "xl")) {
+      justify-content: space-between;
+    }
+    @include sizes(("xs", "sm", "md")) {
+      justify-content: center;
+    }
+    flex-wrap: wrap;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .align_text {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      figure {
+        margin: 0;
+      }
+    }
+    @include sizes(("xs", "sm", "md")) {
+      .align_text:nth-of-type(1) {
+        margin-bottom: 30px;
+      }
+      .align_text:nth-of-type(3) {
+        margin-top: 30px;
+      }
+    }
+
+    .texts {
+      color: $white;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      a {
+        font-family: "Glypha-LT";
+        font-size: 32px;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+  }
+}

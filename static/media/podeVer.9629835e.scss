@@ -1,0 +1,70 @@
+@import '../../styles/index.scss';
+
+.podeVer{
+    display: flex;
+    background-color: $base-grey;
+
+    @include sizes('mobile'){
+        height: 700px;
+    }
+    .row{
+       display: flex;
+       width: 100%;
+       @include sizes('desktop'){
+        min-height: 500px;
+       }
+       align-items: center;
+       margin : $global-margin;
+    }
+    .outer_images{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        max-width: 150px;
+        text-align: left;
+        a{
+            margin-top: 10px;
+            font-size: 15px;
+            color: $base-green;
+            font-weight: bold;
+        }
+        
+    }
+    .align_images{
+        display: flex;
+        align-items: end;
+        @include sizes('mobile'){
+            justify-content: space-around;
+        }
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        >div{
+            background-color: $base-grey;
+        }
+        
+    }
+    .inner_images{
+            width: 150px;
+            height: 150px;
+            //border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $white;
+            p{
+                font-family: 'Glypha-LT';
+                text-align: left;
+                font-size: 32px;
+                font-weight: bold;
+            }
+            img{
+                max-width: 100%;
+                height: auto;
+                width: 101px;
+                height: 100px;
+            }
+        }
+    
+}
